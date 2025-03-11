@@ -10,57 +10,59 @@ let currentIndex = 0
 
 nextElement.addEventListener('click', function () {
 
-    if( currentIndex === carouselItem.length - 1 ){
-    
+    if (currentIndex === carouselItem.length - 1) {
+
         carouselItem[currentIndex].classList.remove('active');
         currentIndex = 0
         carouselItem[currentIndex].classList.add('active');
 
-    } else{
-  
+    } else {
+
         carouselItem[currentIndex].classList.remove('active');
-  
-    currentIndex++;
-  
-    carouselItem[currentIndex].classList.add('active');
+
+        currentIndex++;
+
+        carouselItem[currentIndex].classList.add('active');
 
     }
 
-  
-  })
+
+})
 
 
 
+
+prevElement.addEventListener('click', function () {
+
+    if (currentIndex !== 0) {
+        carouselItem[currentIndex].classList.remove('active');
+
+        currentIndex--;
+
+        carouselItem[currentIndex].classList.add('active');
+
+
+    } else {
+
+        carouselItem[0].classList.remove('active');
+
+        currentIndex = carouselItem.length - 1
+
+
+        carouselItem[currentIndex].classList.add('active');
+
+    }
+})
+
+
+
+
+
+
+
+setInterval(() => {
+nextElement.click()
     
-    prevElement.addEventListener('click', function () {
-      
-        if(currentIndex !== 0 ){
-            carouselItem[currentIndex].classList.remove('active');
-           
-            currentIndex--;
-          
-            carouselItem[currentIndex].classList.add('active');
-        
-        
-        } else{
-       
-             carouselItem[0].classList.remove('active');
-           
-            currentIndex =  carouselItem.length -1
-            
-           
-             carouselItem[currentIndex].classList.add('active');
-         
-        }
-       })
-    
-    
+}, 6000);
 
 
-
-
-
-
-
-    
-      
