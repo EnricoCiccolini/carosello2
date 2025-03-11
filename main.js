@@ -31,9 +31,6 @@ nextElement.addEventListener('click', function () {
 
 
 
-prevElement.addEventListener('click', function () {
-
-    console.log("ho cliccato qui")
     
     prevElement.addEventListener('click', function () {
       
@@ -58,7 +55,6 @@ prevElement.addEventListener('click', function () {
        })
     
     
-    })
 
 
 
